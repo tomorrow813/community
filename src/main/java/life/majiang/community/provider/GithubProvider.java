@@ -26,7 +26,7 @@ public class GithubProvider {
             //System.out.println(string);
             //String token = string.split("&")[0].split("=")[1];
             //String token = "15d17179ce8e82bd4eea18b5e9bd92f636d961d3";
-           String token = "a09b0ae83c34cb65dda015b5513ed94a963fce3e";
+           String token = "dda1df7686a4a96088ed3fd68b2c338b401c972c";
             return token;
 
         } catch (IOException e) {

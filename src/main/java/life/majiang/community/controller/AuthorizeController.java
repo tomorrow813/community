@@ -55,9 +55,10 @@ public class AuthorizeController {
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtCreate(user.getGmtModified());
+            System.out.println("auth"+user);
             userMapper.insert(user);
             response.addCookie(new Cookie("token",token));
-            request.getSession().setAttribute("user",githubUser);
+            request.getSession().setAttribute("user",user);
             return "redirect:/";
             //登录成功,写cookie,session
 
