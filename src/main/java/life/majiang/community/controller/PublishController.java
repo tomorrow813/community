@@ -70,12 +70,12 @@ public class PublishController {
             model.addAttribute("error", "用户未登录");
             return "publish";
         }
-
+        System.out.println(user);
         Question question = new Question();
         question.setTitle(title);
         question.setDescription(description);
         question.setTag(tag);
-        question.setCreator(user.getName());
+        question.setCreator(user.getId());
         question.setId(id);
         question.setGmtCreate(System.currentTimeMillis());
         question.setGmtModified(question.getGmtCreate());
